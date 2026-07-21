@@ -1,0 +1,260 @@
+/* ==============================
+   T.E.A.M.S Initiative
+   Registration Page Styles
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #f4f7fb, #e9f2ff);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ==============================
+   Container
+============================== */
+
+.container {
+    max-width: 950px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* ==============================
+   Heading
+============================== */
+
+.container h1 {
+    text-align: center;
+    color: #0A2540;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+/* ==============================
+   Form Layout
+============================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+/* ==============================
+   Labels
+============================== */
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #0A2540;
+}
+
+/* ==============================
+   Inputs
+============================== */
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all .3s ease;
+    background: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0077cc;
+    box-shadow: 0 0 8px rgba(0,119,204,.25);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+/* ==============================
+   Checkbox
+============================== */
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox input {
+    width: auto;
+    margin-top: 5px;
+}
+
+.checkbox label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+/* ==============================
+   Button
+============================== */
+
+button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #0077cc;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: #005fa3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ==============================
+   Required Field Indicator
+============================== */
+
+label::after {
+    content: "";
+}
+
+label.required::after {
+    content: " *";
+    color: red;
+}
+
+/* ==============================
+   Success Message
+============================== */
+
+.success-message {
+    text-align: center;
+    background: #e8f7ee;
+    color: #1b7f46;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* ==============================
+   Error Message
+============================== */
+
+.error-message {
+    text-align: center;
+    background: #ffe9e9;
+    color: #c62828;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* ==============================
+   Links
+============================== */
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   Footer
+============================== */
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* ==============================
+   Responsive
+============================== */
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full {
+        grid-column: auto;
+    }
+
+    .container h1 {
+        font-size: 1.6rem;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 14px;
+    }
+}
